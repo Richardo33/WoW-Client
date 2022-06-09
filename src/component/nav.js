@@ -6,13 +6,18 @@ import "../pages/syling/nav.css";
 import AddDrop from "../asset/addDrop.png";
 import Logout from "../asset/logoutRed.png";
 import Trans from "../asset/trans.png";
+import { useNavigate } from "react-router-dom";
+
 
 function Navigasi() {
+
+const navigate = useNavigate()
+
   return (
     <div>
       <Navbar bg="" variant="" className="navbar pb-3">
         <Container>
-          <Navbar.Brand href="/home">
+          <Navbar.Brand onClick={()=> navigate("/home")}>
             <img
               alt=""
               src={Logo}
@@ -27,15 +32,16 @@ function Navigasi() {
             </Dropdown.Toggle>
 
             <Dropdown.Menu>
-              <Dropdown.Item href="/addBook-admin">
+              <Dropdown.Item 
+              onClick={()=> navigate("/addBook-admin")}>
                 <img src={AddDrop} alt="" /> Add Book
               </Dropdown.Item>{" "}
               <hr />
-              <Dropdown.Item href="/transactions-admin">
+              <Dropdown.Item onClick={()=> navigate("/transactions-admin")}>
                 <img src={Trans} style={{ width: "40px" }} alt="" /> Transaction
               </Dropdown.Item>
               <hr />
-              <Dropdown.Item href="/">
+              <Dropdown.Item onClick={()=>navigate("/")}>
                 <img src={Logout} alt="" /> Log Out
               </Dropdown.Item>
             </Dropdown.Menu>
