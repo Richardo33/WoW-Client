@@ -141,7 +141,7 @@ function ProfilePages() {
                       onClick={() => {
                         handleDetail(item.books.id);
                       }}
-                      src={`http://localhost:5000/uploads/${item.books.imgCover}`}
+                      src={item.books.imgCover}
                       alt=""
                     />
                     <div onClick={()=>deleteMyBooks(item.idBooks)} style={{width: 200, backgroundColor: "#fff", textAlign: "center", margin: "5% 0", cursor:"pointer"}}>

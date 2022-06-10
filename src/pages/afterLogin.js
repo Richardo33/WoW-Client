@@ -75,7 +75,7 @@ function AfterLogin() {
                     onClick={() => handleDetail(item.id)}
                   >
                     <img
-                      src={`http://localhost:5000/uploads/${item.imgCover}`}
+                      src={item.imgCover}
                       alt=""
                       style={{
                         width: 200,
