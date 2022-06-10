@@ -38,6 +38,7 @@ function AddBook() {
       [e.target.name]:
         e.target.type === "file" ? e.target.files : e.target.value,
     });
+    console.log(form);
   };
 
   const handleSubmit = async (e) => {
