@@ -66,7 +66,7 @@ function AddBook() {
       const response = await API.post("/addbook", formData, config);
       console.log(response);
 
-      if (response.status === 200) {
+      if (response.data.status === "Add Book done") {
         Swal.fire("Well Done!", "Add Book Successfully!", "success");
       } else {
         Swal.fire("failed!", "cannot added book!", "warning");
