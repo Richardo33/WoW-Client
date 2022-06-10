@@ -25,20 +25,12 @@ function AddBook() {
     // imgCover: "",
   });
 
-  // const handleAlert = (e) => {
-  //   if (response.status == "success") {
-  //     Swal.fire("Well Done!", "Add Book Successfully!", "success");
-  //   } else {
-  //   }
-  // };
-
   const handleChange = (e) => {
     setForm({
       ...form,
       [e.target.name]:
         e.target.type === "file" ? e.target.files : e.target.value,
     });
-    console.log(form);
   };
 
   const handleSubmit = async (e) => {
@@ -51,6 +43,7 @@ function AddBook() {
         },
       };
 
+      console.log(form);
       // Data body
       const formData = new FormData();
       formData.set("title", form.title);
