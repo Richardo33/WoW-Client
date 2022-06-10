@@ -46,7 +46,7 @@ function AddBook() {
       // Configuration Content-type
       const config = {
         headers: {
-          "Content-type": "multipart/form-data",
+          "Content-type": "application/json",
         },
       };
 
