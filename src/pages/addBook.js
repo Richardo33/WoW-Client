@@ -21,8 +21,8 @@ function AddBook() {
     author: "",
     isbn: "",
     about: "",
-    bookFile: "",
-    imgCover: "",
+    // bookFile: "",
+    // imgCover: "",
   });
 
   // const handleAlert = (e) => {
@@ -58,8 +58,8 @@ function AddBook() {
       formData.set("author", form.author);
       formData.set("isbn", form.isbn);
       formData.set("about", form.about);
-      formData.set("bookFile", form.bookFile[0], form.bookFile[0].name);
-      formData.set("imgCover", form.imgCover[0], form.imgCover[0].name);
+      // formData.set("bookFile", form.bookFile[0], form.bookFile[0].name);
+      // formData.set("imgCover", form.imgCover[0], form.imgCover[0].name);
 
       console.log(formData);
       // Insert data user to database
