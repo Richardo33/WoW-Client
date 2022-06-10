@@ -61,7 +61,7 @@ function AddBook() {
       formData.set("bookFile", form.bookFile[0], form.bookFile[0].name);
       formData.set("imgCover", form.imgCover[0], form.imgCover[0].name);
 
-      // console.log(formData);
+      console.log(formData);
       // Insert data user to database
       const response = await API.post("/addbook", formData, config);
       console.log(response);
